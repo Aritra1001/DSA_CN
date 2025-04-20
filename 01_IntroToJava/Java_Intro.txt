@@ -1,0 +1,2 @@
+In C/C++, we have to share the source code so that it could be compiled on different systems and hence the machine will understand.
+In Java,  a compiler will compile the source code into a bytecode which will be converted to machine code on different systems using the JVM (which is platform specific), so we don't have to share code, we can share the bytecode instead.
