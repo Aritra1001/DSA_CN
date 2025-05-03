@@ -1,0 +1,24 @@
+import java.util.*;
+public class PalindromeNum {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.println(isPalindrome(n));
+        sc.close();
+    }
+
+    public static boolean isPalindrome(int n){
+        int revNum = 0, num = n;
+        while(num != 0){
+            int ld = num % 10;
+            revNum = revNum * 10 + ld;
+            num = num / 10;
+        }
+        if(revNum == n){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+}
