@@ -13,11 +13,10 @@ public class UpdateElement {
         for(int i = 0; i < arr.length; i++){
             if(arr[i] == key){
                 arr[i] = newKey;
-            }
-            else{
-                System.out.println("Key not found in the array");
+                return;
             }
         }
+        System.out.println("Key is not found in the Array!");
     }
 
     public static void main(String[] args) {
