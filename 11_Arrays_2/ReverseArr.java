@@ -23,14 +23,13 @@ public class ReverseArr {
 
     public static void reverseArray(int arr[], int l, int r) {
         int temp = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if (l < r) {
-                temp = arr[l];
-                arr[l] = arr[r];
-                arr[r] = temp;
-                l++;
-                r--;
-            }
+        while (l < r) {
+            temp = arr[l];
+            arr[l] = arr[r];
+            arr[r] = temp;
+            l++;
+            r--;
         }
+
     }
 }
