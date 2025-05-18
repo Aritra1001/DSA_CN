@@ -25,31 +25,22 @@ public class RotateArray2 {
     }
 
     public static void rotateArr(int a[], int len, int x, int dir) {
-        int l = 0, r = len - 1;
-        reverseArr(a, l, r);
+        reverseArr(a, 0, len - 1);
         x = x % len;
 
         switch (dir) {
             case 0:
-                l = 0;
-                r = len - x - 1;
-                reverseArr(a, l, r);
-                l = len - x;
-                r = len - 1;
-                reverseArr(a, l, r);
+                reverseArr(a, 0, len - x - 1);
+                reverseArr(a, len - x, len - 1);
                 break;
             case 1:
-                l = 0;
-                r = x - 1;
-                reverseArr(a, l, r);
-                l = x;
-                r = len - 1;
-                reverseArr(a, l, r);
+                reverseArr(a, 0, x - 1);
+                reverseArr(a, x, len - 1);
                 break;
         }
 
         System.out.print("final rotated array: ");
-        for(int i : a){
+        for (int i : a) {
             System.out.print(i + " ");
         }
     }
