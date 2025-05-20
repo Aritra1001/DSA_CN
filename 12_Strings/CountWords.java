@@ -11,13 +11,17 @@ public class CountWords {
 
     public static void countWords(String str){
         // by counting the spaces 
-        int count = 0;
-        for(int i = 0; i < str.length(); i++){
-            if(str.charAt(i) == ' '){
-                count++;
-            }
-        }
-        count++;
-        System.out.println("Number of words = " + count);
+        // int count = 0;
+        // for(int i = 0; i < str.length(); i++){
+        //     if(str.charAt(i) == ' '){
+        //         count++;
+        //     }
+        // }
+        // count++;
+        // System.out.println("Number of words = " + count);
+
+        // using the split method
+        String strArr[] = str.split(" ");
+        System.out.println("Number of words = " + strArr.length);
     }
 }
